@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){int n,a[100],k,ch;printf("Enter number of elements: ");scanf("%d",&n);for(int i=0;i<n;i++)scanf("%d",&a[i]);printf("Enter positions: ");scanf("%d",&k);printf("1.Left 2.Right: ");scanf("%d",&ch);k%=n;while(k--){if(ch==1){int x=a[0];for(int i=0;i<n-1;i++)a[i]=a[i+1];a[n-1]=x;}else{int x=a[n-1];for(int i=n-1;i>0;i--)a[i]=a[i-1];a[0]=x;}}for(int i=0;i<n;i++)printf("%d ",a[i]);printf("\n");return 0;}
